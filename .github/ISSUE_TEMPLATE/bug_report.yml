@@ -1,0 +1,80 @@
+name: Bug report
+description: Something in a Sundogs app, the admin or the store doesn't work as it should.
+title: "[Bug] <app>: <short description>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Apps marked **Beta** may still break; reports like this help us fix them fast. Your AI agent can fill this in for you: ask it to "file a Sundogs bug report with the self-test output".
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secrets** (API keys, tokens, passwords, `.dev.vars`, licence keys) **or your visitors' data** (form submissions, emails, IP addresses). This page is public. For security problems, use **Security → Report a vulnerability** instead.
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app or part?
+      options:
+        - "Links & Redirects"
+        - "Forms"
+        - "Popups"
+        - "Countdown Timers"
+        - "Social Proof"
+        - "Reviews"
+        - "Waitlist"
+        - "SEO Pack"
+        - "Cookie Consent"
+        - "Tag Manager"
+        - "Analytics"
+        - "Site Health"
+        - "The store (sundo.gs)"
+        - "Core / admin / install"
+        - "Not sure"
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: The app version and the site layer (core) version. Your admin shows them under Settings → Apps; `site-apps/manifest.json` has them too.
+      placeholder: "Forms 0.7.3, core 0.25.7"
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: Where does your site run?
+      options:
+        - Cloudflare Pages
+        - Cloudflare Workers (static assets)
+        - Workers with a framework adapter (Astro, Next.js, …)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: Steps to see it again help a lot.
+      placeholder: "1. Open the admin → Forms\n2. …\nI expected … but …"
+    validations:
+      required: true
+  - type: textarea
+    id: selftest
+    attributes:
+      label: Self-test output
+      description: Admin → Site Health (or your agent's `site_selftest` tool). Paste the failing lines with their fix text. Remove anything private first.
+      render: text
+  - type: textarea
+    id: agent
+    attributes:
+      label: Which AI agent, if any, and what did it say?
+      description: e.g. Claude Code, Codex, Cursor; paste its error message if there was one.
+  - type: checkboxes
+    id: check
+    attributes:
+      label: Before you send
+      options:
+        - label: I removed secrets, keys and visitors' data from everything above.
+          required: true

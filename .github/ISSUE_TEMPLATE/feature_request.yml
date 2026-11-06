@@ -1,0 +1,46 @@
+name: Feature request
+description: An idea to make an existing app or the store better.
+title: "[Idea] <app>: <short description>"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secrets** (API keys, tokens, passwords, `.dev.vars`, licence keys) **or your visitors' data** (form submissions, emails, IP addresses). This page is public. For security problems, use **Security → Report a vulnerability** instead.
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app or part?
+      options:
+        - "Links & Redirects"
+        - "Forms"
+        - "Popups"
+        - "Countdown Timers"
+        - "Social Proof"
+        - "Reviews"
+        - "Waitlist"
+        - "SEO Pack"
+        - "Cookie Consent"
+        - "Tag Manager"
+        - "Analytics"
+        - "Site Health"
+        - "The store (sundo.gs)"
+        - "Core / admin / install"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The job or problem, in your own words. What's in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else? (site type, how often, workarounds)

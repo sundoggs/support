@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security problem
+    url: https://github.com/sundoggs/support/security/advisories/new
+    about: Report a security issue privately. Never post it as a public issue.
+  - name: Orders, refunds and account help
+    url: https://sundo.gs/contact
+    about: Billing and anything with personal details goes to support@sundo.gs, not here.
+  - name: Docs for AI agents
+    url: https://sundo.gs/agents
+    about: How agents connect to the store and install apps.

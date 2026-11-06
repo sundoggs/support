@@ -1,0 +1,35 @@
+name: Question / help
+description: Not sure if it's a bug? Ask here.
+title: "[Question] <short description>"
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secrets** (API keys, tokens, passwords, `.dev.vars`, licence keys) **or your visitors' data** (form submissions, emails, IP addresses). This page is public. For security problems, use **Security → Report a vulnerability** instead.
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app or part?
+      options:
+        - "Links & Redirects"
+        - "Forms"
+        - "Popups"
+        - "Countdown Timers"
+        - "Social Proof"
+        - "Reviews"
+        - "Waitlist"
+        - "SEO Pack"
+        - "Cookie Consent"
+        - "Tag Manager"
+        - "Analytics"
+        - "Site Health"
+        - "The store (sundo.gs)"
+        - "Core / admin / install"
+        - "Not sure"
+  - type: textarea
+    id: q
+    attributes:
+      label: Your question
+    validations:
+      required: true
