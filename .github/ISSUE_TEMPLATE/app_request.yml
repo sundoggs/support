@@ -1,0 +1,26 @@
+name: New app request
+description: An app you wish Sundogs had.
+title: "[App request] <what it does>"
+labels: ["app-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste secrets** (API keys, tokens, passwords, `.dev.vars`, licence keys) **or your visitors' data** (form submissions, emails, IP addresses). This page is public. For security problems, use **Security → Report a vulnerability** instead.
+  - type: textarea
+    id: job
+    attributes:
+      label: What should the app do?
+      description: The job it does for your site and who it's for.
+    validations:
+      required: true
+  - type: textarea
+    id: now
+    attributes:
+      label: What do you use today?
+      description: A plugin, a SaaS tool, a script… and what you dislike about it.
+  - type: input
+    id: price
+    attributes:
+      label: What would it be worth to you? (optional)
+      placeholder: "e.g. $19 one-time per site"
