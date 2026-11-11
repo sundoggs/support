@@ -64,7 +64,7 @@ body:
     id: selftest
     attributes:
       label: Self-test output
-      description: Admin → Site Health (or your agent's `site_selftest` tool). Paste the failing lines with their fix text. Remove anything private first.
+      description: Admin → Site Health (or your agent's `site_self_test` tool). Paste the failing lines with their fix text. Remove anything private first.
       render: text
   - type: textarea
     id: agent

@@ -13,7 +13,7 @@ A good bug report has:
 - the app and its version, and the site layer (core) version (admin → Settings → Apps);
 - where your site runs (Pages or Workers);
 - what happened and what you expected;
-- the self-test output (admin → Site Health, or your agent's `site_selftest` tool).
+- the self-test output (admin → Site Health, or your agent's `site_self_test` tool).
 
 Your AI agent can file it for you: ask it to "file a Sundogs bug report with the self-test output".
 
